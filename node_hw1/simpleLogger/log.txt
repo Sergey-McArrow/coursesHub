@@ -1,0 +1,4 @@
+2024-10-29T16:14:48.948Z - This is the first log message.
+2024-10-29T16:14:48.948Z - This is the second log message.
+2024-10-29T16:14:48.948Z - Logging is fun!
+
