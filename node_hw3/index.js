@@ -26,12 +26,12 @@ fs.writeFile('info.txt', 'Node.js is awesome!', 'utf-8', (err) => {
     return
   }
   console.log('[SUCCESS]: File created successfully')
-})
 
-fs.readFile('info.txt', 'utf-8', (err, data) => {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log('[SUCCESS]: File readed successfully | File contains : ' + data)
+  fs.readFile('info.txt', 'utf-8', (err, data) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+    console.log('[SUCCESS]: File readed successfully | File contains : ' + data)
+  })
 })
