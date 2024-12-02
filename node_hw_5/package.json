@@ -1,0 +1,11 @@
+{
+  "name": "node_hw_5",
+  "version": "1.0.0",
+  "description": "Node.js homework",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "license": "MIT",
+  "type": "module"
+}

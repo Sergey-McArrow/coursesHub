@@ -1,0 +1,25 @@
+# mediawiki_db
+# Access via http://localhost:8080
+version: '3.8'
+
+services:
+  mediawiki:
+    image: mediawiki:latest
+    restart: always
+    ports:
+      - '8080:80'
+    depends_on:
+      - database
+    volumes:
+      - ./images:/var/www/html/images #
+    environment:
+      - MEDIAWIKI_DB_HOST=database
+      - MEDIAWIKI_DB_USER=root
+      - MEDIAWIKI_DB_PASSWORD=example_password
+
+  database:
+    image: mariadb:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=example_password
+      - MYSQL_DATABASE=mediawiki
