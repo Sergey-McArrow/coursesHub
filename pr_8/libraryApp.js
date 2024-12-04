@@ -1,59 +1,91 @@
-import express from 'express'
-import { books } from './const.js'
+import express from "express"
+import cors from "cors"
+import { sequelize } from "./config/db.js"
+import { Book } from "./models/Book.js"
 
-const port = process.env.PORT || 3333
+const PORT = process.env.PORT || 3333
 const app = express()
 app.use(express.json())
+app.use(cors())
 
-app.get('/books', (_req, res) => {
-	res.json({ books })
+app.get("/books", async (_req, res) => {
+  try {
+    const books = await Book.findAll()
+    res.json({ books })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
 })
 
-app.get('/book/:id', (req, res) => {
-	const { id } = req.params
-	const book = books.find(i => i.id == Number(id))
-	if (!book) res.status(404).json({ message: 'book not found' })
-	res.json({ book })
+app.get("/books/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    const book = await Book.findByPk(id)
+    if (!book) {
+      return res.status(404).json({ message: "Book not found" })
+    }
+    res.json({ book })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
 })
 
-app.post('/book/add', (req, res) => {
-	const newbook = req.body
-
-	if (!newbook || Object.keys(newbook).length === 0) {
-		return res.status(400).json({ message: 'You must provide a new book' })
-	}
-
-	books.push(newbook)
-	res.status(201).json({ message: 'Added successfully', book: newbook })
+app.post("/books/add", async (req, res) => {
+  const newBook = req.body
+  try {
+    if (!newBook || Object.keys(newBook).length === 0) {
+      return res.status(400).json({ message: "You must provide a new book" })
+    }
+    const book = await Book.create(newBook)
+    res.status(201).json({ message: "Added successfully", book })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
 })
 
-app.put('/book/:id', (req, res) => {
-	const { id } = req.params
-	const updatedbook = req.body
-	const index = books.findIndex(i => i.id === Number(id))
+app.put("/books/:id", async (req, res) => {
+  const { id } = req.params
+  const updatedBook = req.body
+  try {
+    if (!updatedBook || Object.keys(updatedBook).length === 0) {
+      return res
+        .status(400)
+        .json({ message: "You must provide book data to update" })
+    }
 
-	if (index === -1) {
-		return res.status(404).json({ message: 'book not found' })
-	}
-	if (!updatedbook || Object.keys(updatedbook).length === 0) {
-		return res.status(400).json({ message: 'You must provide a new book' })
-	}
-	books[index] = { ...books[index], ...updatedbook }
+    const book = await Book.findByPk(id)
+    if (!book) {
+      return res.status(404).json({ message: "Book not found" })
+    }
 
-	res.json({ message: 'book updated successfully', book: books[index] })
-})
-app.delete('/book/:id', (req, res) => {
-	const { id } = req.params
-	const index = books.findIndex(book => book.id === Number(id))
-
-	if (index === -1) {
-		return res.status(404).json({ message: 'book not found' })
-	}
-	const deletedbook = books[index]
-	books.splice(index, 1)
-	res.json({ message: 'book deleted successfully', book: deletedbook })
+    await book.update(updatedBook)
+    res.json({ message: "Book updated successfully", book })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
 })
 
-app.listen(port, () => {
-	console.log('working on port: ', port)
+app.delete("/books/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    const book = await Book.findByPk(id)
+    if (!book) {
+      return res.status(404).json({ message: "Book not found" })
+    }
+
+    await book.destroy()
+    res.json({ message: "Book deleted successfully" })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+})
+
+app.listen(PORT, async () => {
+  try {
+    await sequelize.authenticate()
+    console.log("Connection has been established successfully.")
+    console.log("Listen port: ", PORT)
+  } catch (error) {
+    console.error(error)
+  }
 })
