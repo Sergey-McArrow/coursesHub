@@ -12,6 +12,11 @@ export const Home = () => {
         Select a homework assignment from the navigation menu above to explore
         different React components and features.
       </p>
+      <p>
+        <a href='https://github.com/Sergey-McArrow/coursesHub/tree/main/react/hws'>
+          Repo
+        </a>
+      </p>
     </div>
   );
 };
