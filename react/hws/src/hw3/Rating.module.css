@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 220px;
+}

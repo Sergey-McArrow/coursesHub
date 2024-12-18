@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #404040;
+  border-radius: 2rem;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.google {
+  border-color: #DB4437;
+}
+
+.google:hover {
+  border-color: #DB4437;
+}
+
+.facebook {
+  border-color: #4267B2;
+}
+
+.facebook:hover {
+  border-color: #4267B2;
+}
+
+.github {
+  border-color: #333333;
+}
+
+.github:hover {
+  border-color: #333;
+}

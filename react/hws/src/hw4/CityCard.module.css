@@ -1,0 +1,49 @@
+.card {
+  background-color: #2d2d2d;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #b3b3b3;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.factsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.factItem {
+  color: #ffffff;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.factItem::before {
+  content: "•";
+  color: #61dafb;
+}

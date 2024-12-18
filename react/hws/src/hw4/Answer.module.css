@@ -1,0 +1,38 @@
+.button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #404040;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #505050;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.correct {
+  background-color: #22543d;
+}
+
+.incorrect {
+  background-color: #742a2a;
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  transform: none;
+  background-color: #404040;
+}
