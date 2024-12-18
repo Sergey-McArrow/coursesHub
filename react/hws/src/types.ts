@@ -26,4 +26,8 @@ export type TTranslations = {
   switchLanguage: string;
 };
 
-
+export type TLanguageContextType = {
+  language: TLanguage;
+  setLanguage: (lang: TLanguage) => void;
+  translations: TTranslations;
+};

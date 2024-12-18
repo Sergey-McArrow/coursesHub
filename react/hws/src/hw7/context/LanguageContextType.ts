@@ -1,10 +1,4 @@
-import { TLanguage, TTranslations } from '../../types';
 import { createContext } from 'react';
-
-export type TLanguageContextType = {
-  language: TLanguage;
-  setLanguage: (_lang: TLanguage) => void;
-  translations: TTranslations;
-};
+import { TLanguageContextType } from '../../types';
 
 export const LanguageContext = createContext<TLanguageContextType | null>(null);
