@@ -10,6 +10,7 @@ import { Homework6 } from './pages/Homework6';
 import { Homework7 } from './pages/Homework7';
 import { Homework8 } from './pages/Homework8';
 import { Homework9 } from './pages/Homework9';
+import { Homework10 } from './pages/Homework10';
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
           <Route path="homework7" element={<Homework7 />} />
           <Route path="homework8" element={<Homework8 />} />
           <Route path="homework9" element={<Homework9 />} />
+          <Route path="homework10" element={<Homework10 />} />
         </Route>
       </Routes>
     </BrowserRouter>
