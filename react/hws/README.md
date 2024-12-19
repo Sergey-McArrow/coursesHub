@@ -1,11 +1,51 @@
-# React + TypeScript + Vite
+# React Homework Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of React homework assignments showcasing various React concepts and features.
 
-Currently, two official plugins are available:
+🔗 [Live Demo](https://courses-hub-nine.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Modern React with TypeScript
+- Component-based architecture
+- Form handling with validation
+- State management
+- Routing with React Router
+- CSS Modules for styling
+- Responsive design
+
+## Homework Assignments
+
+1. Basic Components and JSX
+2. Props and Lists
+3. Rating and Lists with State
+4. City Selector and Math Quiz
+5. Login Form with Validation
+6. User Profile
+7. Language Switcher with Context
+8. List Items
+9. Dynamic Form with Zod Validation
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- React Router
+- Zod
+- React Hook Form
+
+## Development
+
+To run this project locally:
+
+```bash
+# Install dependencies
+yarn install
+
+# Start development server
+yarn dev
+```
 
 ## Expanding the ESLint configuration
 
