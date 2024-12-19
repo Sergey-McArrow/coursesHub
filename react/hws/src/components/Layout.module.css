@@ -13,9 +13,9 @@
 .navList {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
-  margin: 0;
-  padding: 0;
 }
 
 .navLink {
@@ -24,6 +24,10 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.2s;
+  border: 1px solid #404040;
+  min-width: 125px;
+  display: block;
+  text-align: center;
 }
 
 .navLink:hover {
