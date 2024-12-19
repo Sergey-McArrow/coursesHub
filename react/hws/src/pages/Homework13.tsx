@@ -1,13 +1,13 @@
-import { DynamicForm } from '../hw9/DynamicForm';
+import { Filter } from '../hw13/Filter';
 import styles from './pages.module.css';
 
-export function Homework9() {
+export function Homework13() {
   return (
     <div className={styles.homework}>
       <section className={styles.section}>
-        <h2 className={styles.title}>Homework 9</h2>
+        <h2 className={styles.title}>Homework 13 - User Filter</h2>
         <div className={styles.content}>
-          <DynamicForm />
+          <Filter />
         </div>
       </section>
     </div>

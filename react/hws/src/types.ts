@@ -31,3 +31,8 @@ export type TLanguageContextType = {
   setLanguage: (lang: TLanguage) => void;
   translations: TTranslations;
 };
+
+export type TUserState = {
+  name: string;
+  status: string;
+};

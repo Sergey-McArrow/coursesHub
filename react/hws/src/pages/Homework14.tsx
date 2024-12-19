@@ -1,15 +1,14 @@
-import { DynamicForm } from '../hw9/DynamicForm';
+import { HW14 } from '../hw14';
 import styles from './pages.module.css';
-
-export function Homework9() {
+export const Homework14 = () => {
   return (
     <div className={styles.homework}>
       <section className={styles.section}>
-        <h2 className={styles.title}>Homework 9</h2>
+        <h2 className={styles.title}>Homework 14 </h2>
         <div className={styles.content}>
-          <DynamicForm />
+          <HW14 />
         </div>
       </section>
     </div>
   );
-}
+};
