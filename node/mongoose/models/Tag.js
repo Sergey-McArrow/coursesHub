@@ -1,15 +1,16 @@
 import { model, Schema } from 'mongoose';
 
-const categorySchema = new Schema({
+const tagSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true,
+    unique: true,
   },
-  products: {
+  articles: [{
     type: Schema.Types.ObjectId,
-    ref: ['Product'],
-  },
+    ref: 'Article',
+  }],
 });
 
-export const Caregory = model('Category', categorySchema);
+export const Tag = model('Tag', tagSchema);
