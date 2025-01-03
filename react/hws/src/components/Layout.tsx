@@ -1,5 +1,5 @@
-import { Link, Outlet } from 'react-router-dom';
-import styles from './Layout.module.css';
+import { Link, Outlet } from 'react-router-dom'
+import styles from './Layout.module.css'
 
 export const Layout = () => {
   return (
@@ -81,11 +81,26 @@ export const Layout = () => {
               Homework 14
             </Link>
           </li>
+          <li>
+            <Link to='/homework15' className={styles.navLink}>
+              Homework 15
+            </Link>
+          </li>
+          <li>
+            <Link to='/homework16' className={styles.navLink}>
+              Homework 16
+            </Link>
+          </li>
+          <li>
+            <Link to='/homework18' className={styles.navLink}>
+              Homework 18
+            </Link>
+          </li>
         </ul>
       </nav>
       <main className={styles.main}>
         <Outlet />
       </main>
     </div>
-  );
-};
+  )
+}

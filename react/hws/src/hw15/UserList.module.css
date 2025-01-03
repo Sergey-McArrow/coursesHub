@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background-color: rgb(30 41 59);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.userName {
+  color: rgb(241 245 249);
+}
