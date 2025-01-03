@@ -3,6 +3,7 @@ import usersReducer from './slices/usersSlice'
 import userReducer from './slices/userSlice'
 import users20Reducer from './slices/userSlicehw20'
 import questionnaireReducer from './slices/questionnaireSlice'
+import quoteReducer from './slices/quoteSlice'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 export const store = configureStore({
@@ -11,6 +12,7 @@ export const store = configureStore({
     user: userReducer,
     usersHW20: users20Reducer,
     questionnaire: questionnaireReducer,
+    quote: quoteReducer,
   },
 })
 

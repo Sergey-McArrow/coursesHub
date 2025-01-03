@@ -27,6 +27,7 @@ import { Filter } from '../hw13/Filter'
 import { HW19 } from '../hw19'
 import { HW20 } from '../hw20'
 import { HW21 } from '../hw21'
+import { HW22 } from '../hw22'
 
 export const Homework1 = () => (
   <div className={styles.container}>
@@ -158,3 +159,4 @@ export const Homework18 = () => <HW18 />
 export const Homework19 = () => <HW19 />
 export const Homework20 = () => <HW20 />
 export const Homework21 = () => <HW21 />
+export const Homework22 = () => <HW22 />
