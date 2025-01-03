@@ -96,6 +96,11 @@ export const Layout = () => {
               Homework 18
             </Link>
           </li>
+          <li>
+            <Link to='/homework19' className={styles.navLink}>
+              Homework 19
+            </Link>
+          </li>
         </ul>
       </nav>
       <main className={styles.main}>

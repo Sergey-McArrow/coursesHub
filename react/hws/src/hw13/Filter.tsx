@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
-import { setFilter, selectFilteredUsers } from '../redux/usersSlice';
-import styles from './Filter.module.css';
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../redux/store'
+import { setFilter, selectFilteredUsers } from '../redux/usersSlice'
+import styles from './Filter.module.css'
 
 export const Filter = () => {
-  const dispatch = useDispatch();
-  const filter = useSelector((state: RootState) => state.users.filter);
-  const filteredUsers = useSelector(selectFilteredUsers);
+  const dispatch = useDispatch()
+  const filter = useSelector((state: RootState) => state.users.filter)
+  const filteredUsers = useSelector(selectFilteredUsers)
 
   return (
     <div className={styles.container}>
@@ -34,5 +34,5 @@ export const Filter = () => {
         <p className={styles.noResults}>No users found</p>
       )}
     </div>
-  );
-};
+  )
+}

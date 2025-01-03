@@ -1,22 +1,25 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Home } from './components/Home'
-import { Homework1 } from './pages/Homework1'
-import { Homework2 } from './pages/Homework2'
-import { Homework3 } from './pages/Homework3'
-import { Homework4 } from './pages/Homework4'
-import { Homework5 } from './pages/Homework5'
-import { Homework6 } from './pages/Homework6'
-import { Homework7 } from './pages/Homework7'
-import { Homework8 } from './pages/Homework8'
-import { Homework9 } from './pages/Homework9'
-import { Homework10 } from './pages/Homework10'
-import { Homework12 } from './pages/Homework12'
-import { Homework13 } from './pages/Homework13'
-import { Homework14 } from './pages/Homework14'
-import { Homework15 } from './pages/Homework15'
-import { Homework16 } from './pages/Homework16'
-import { Homework18 } from './pages/Homework18'
+import {
+  Homework1,
+  Homework2,
+  Homework3,
+  Homework4,
+  Homework5,
+  Homework6,
+  Homework7,
+  Homework8,
+  Homework9,
+  Homework10,
+  Homework12,
+  Homework13,
+  Homework14,
+  Homework15,
+  Homework16,
+  Homework18,
+  Homework19,
+} from './pages'
 
 export const App = () => {
   return (
@@ -40,6 +43,7 @@ export const App = () => {
           <Route path='homework15' element={<Homework15 />} />
           <Route path='homework16' element={<Homework16 />} />
           <Route path='homework18' element={<Homework18 />} />
+          <Route path='homework19' element={<Homework19 />} />
         </Route>
       </Routes>
     </BrowserRouter>
