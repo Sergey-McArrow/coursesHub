@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../redux/store'
-import { setFilter, selectFilteredUsers } from '../redux/usersSlice'
+import { setFilter, selectFilteredUsers } from '../redux/slices/usersSlice'
 import styles from './Filter.module.css'
 
 export const Filter = () => {

@@ -19,6 +19,7 @@ import {
   Homework16,
   Homework18,
   Homework19,
+  Homework20,
 } from './pages'
 
 export const App = () => {
@@ -44,6 +45,8 @@ export const App = () => {
           <Route path='homework16' element={<Homework16 />} />
           <Route path='homework18' element={<Homework18 />} />
           <Route path='homework19' element={<Homework19 />} />
+          <Route path='homework20' element={<Homework20 />} />
+          <Route path='*' element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

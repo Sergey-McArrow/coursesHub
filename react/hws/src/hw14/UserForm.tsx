@@ -1,27 +1,27 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setUserInfo } from '../redux/userSlice';
-import styles from './styles.module.css';
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setUserInfo } from '../redux/slices/userSlice'
+import styles from './styles.module.css'
 
-export const  UserForm = () =>{
-  const [name, setName] = useState('');
-  const [status, setStatus] = useState('');
-  const [error, setError] = useState('');
-  const dispatch = useDispatch();
+export const UserForm = () => {
+  const [name, setName] = useState('')
+  const [status, setStatus] = useState('')
+  const [error, setError] = useState('')
+  const dispatch = useDispatch()
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
+    e.preventDefault()
+    setError('')
 
     if (!name.trim() || !status.trim()) {
-      setError('Please fill in all fields');
-      return;
+      setError('Please fill in all fields')
+      return
     }
 
-    dispatch(setUserInfo({ name, status }));
-    setName('');
-    setStatus('');
-  };
+    dispatch(setUserInfo({ name, status }))
+    setName('')
+    setStatus('')
+  }
 
   return (
     <div className={styles.card}>
@@ -67,5 +67,5 @@ export const  UserForm = () =>{
         </form>
       </div>
     </div>
-  );
+  )
 }
