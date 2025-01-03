@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom'
 import styles from './Layout.module.css'
 
 export const Layout = () => {
-  const linksArr = new Array(22).fill(null)
+  const linksArr = new Array(23).fill(null)
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>

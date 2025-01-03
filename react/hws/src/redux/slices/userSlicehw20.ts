@@ -12,12 +12,14 @@ interface UsersState {
   users: User[]
   loading: boolean
   error: string | null
+  loggedUser?: User
 }
 
 const initialState: UsersState = {
   users: [],
   loading: false,
   error: null,
+  loggedUser: undefined,
 }
 
 const userSlice = createSlice({
@@ -43,6 +45,12 @@ const userSlice = createSlice({
     deleteUserSuccess: (state, action: PayloadAction<number>) => {
       state.users = state.users.filter((user) => user.id !== action.payload)
     },
+    loginSuccess: (state, action: PayloadAction<number>) => {
+      state.loggedUser = state.users.find((user) => user.id === action.payload)
+    },
+    logoutSuccess: (state) => {
+      state.loggedUser = undefined
+    },
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload
       state.loading = false
@@ -56,6 +64,8 @@ export const {
   updateUserSuccess,
   deleteUserSuccess,
   setError,
+  loginSuccess,
+  logoutSuccess,
 } = userSlice.actions
 
 export const fetchUsers = () => async (dispatch: AppDispatch) => {

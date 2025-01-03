@@ -22,6 +22,7 @@ import {
   Homework20,
   Homework21,
   Homework22,
+  Homework23,
 } from './pages'
 
 export const App = () => {
@@ -50,6 +51,7 @@ export const App = () => {
           <Route path='homework20' element={<Homework20 />} />
           <Route path='homework21' element={<Homework21 />} />
           <Route path='homework22' element={<Homework22 />} />
+          <Route path='homework23' element={<Homework23 />} />
           <Route path='*' element={<Home />} />
         </Route>
       </Routes>
